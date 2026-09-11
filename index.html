@@ -1,238 +1,203 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Skin - Radiate Your Beauty</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: #fffafb;
-            color: #4a2e35;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #fce8ec 0%, #f7d1d8 100%);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumina Skin - Radiate Your Beauty</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body {
+font-family: 'Tajawal', sans-serif;
+background-color: #fffafb;
+color: #4a2e35;
+}
+.hero-gradient {
+background: linear-gradient(135deg, #fce8ec 0%, #f7d1d8 100%);
+}
+</style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
-
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#f3d3d9] px-6 py-4 flex justify-between items-center shadow-sm">
-        <div class="flex items-center gap-2">
-            <span class="text-2xl font-black text-[#d97788] tracking-wider">Lumina Skin 🌸</span>
-        </div>
-        <nav class="hidden md:flex gap-8 text-sm font-medium text-[#73434d]">
-            <a href="#hero" class="hover:text-[#d97788] transition">الرئيسية</a>
-            <a href="#products" class="hover:text-[#d97788] transition">المنتجات</a>
-            <a href="#about" class="hover:text-[#d97788] transition">قصتنا</a>
-            <a href="#contact" class="hover:text-[#d97788] transition">اتصل بنا</a>
-        </nav>
-        <div class="flex items-center gap-4">
-            <button onclick="openCartModal()" class="relative bg-[#d97788] text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:bg-[#c26173] transition flex items-center gap-2">
-                🛍️ السلة <span id="cart-count" class="bg-white text-[#d97788] px-2 py-0.5 rounded-full text-xs font-bold">0</span>
-            </button>
-        </div>
-    </header>
-
-    <section id="hero" class="hero-gradient py-20 px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between">
-        <div class="lg:w-1/2 space-y-6 text-center lg:text-right">
-            <span class="bg-[#d97788]/20 text-[#d97788] text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#d97788]/30">عناية طبيعية فاخرة</span>
-            <h1 class="text-4xl lg:text-6xl font-black leading-tight">
-                تألقي بإشراقة طبيعية مع <span class="text-[#d97788]">Lumina Skin</span>
-            </h1>
-            <p class="text-[#73434d] text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
-                سيروم الوجه الفاخر المصنوع بعناية من أجود المكونات الطبيعية ومستخلصات الورود لترطيب بشرتك بعمق ومنحها نعومة الحرير.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a href="#products" class="bg-[#d97788] hover:bg-[#c26173] text-white px-8 py-3.5 rounded-full font-bold shadow-lg transition text-center">اطلبي السيروم الآن</a>
-                <a href="#about" class="border border-[#d97788] text-[#d97788] hover:bg-[#d97788]/10 px-8 py-3.5 rounded-full font-medium transition text-center">اعرفي المزيد</a>
-            </div>
-        </div>
-        <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center relative">
-            <div class="absolute w-72 h-72 bg-[#f7d1d8] rounded-full filter blur-3xl -z-10"></div>
-            <!-- Updated to use the custom user-provided serum bottle image -->
-            <img src="1000358487_4.png" alt="Lumina Skin Serum" class="w-80 h-auto rounded-3xl shadow-2xl border-4 border-white object-cover">
-        </div>
-    </section>
-
-    <section id="products" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto w-full">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-4xl font-bold text-[#4a2e35]">منتجاتنا المميزة</h2>
-            <p class="text-[#73434d] mt-2">اختيارات طبيعية 100% لأجل نضارة بشرتك</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-md mx-auto">
-            <!-- Product 1 (Only Serum) -->
-            <div class="bg-white rounded-3xl p-6 shadow-sm border border-[#f3d3d9] flex flex-col justify-between hover:shadow-md transition">
-                <div>
-                    <img src="1000358487_4.png" alt="سيروم لومينا سكين" class="w-full h-80 object-cover rounded-2xl mb-4">
-                    <h3 class="font-bold text-xl text-[#4a2e35]">سيروم الورد الطبيعي للوجه</h3>
-                    <p class="text-xs text-[#d97788] font-medium uppercase mt-1">الأكثر مبيعاً</p>
-                    <p class="text-sm text-[#73434d] mt-2">ترطيب عميق، توحيد لون البشرة، ومنحها إشراقة فورية طوال اليوم.</p>
-                </div>
-                <div class="mt-6 flex items-center justify-between">
-                    <span class="text-xl font-black text-[#4a2e35]">4,500 د.ج</span>
-                    <button onclick="addToCart('سيروم الورد الطبيعي للوجه', 4500)" class="bg-[#fce8ec] text-[#d97788] hover:bg-[#d97788] hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition">أضف للسلة</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="bg-[#fce8ec] py-20 px-6 lg:px-20">
-        <div class="max-w-4xl mx-auto text-center space-y-6">
-            <span class="text-[#d97788] font-semibold tracking-widest text-xs uppercase">قصتنا</span>
-            <h2 class="text-3xl lg:text-4xl font-bold text-[#4a2e35]">سر جمالك المستوحى من الطبيعة</h2>
-            <p class="text-[#73434d] leading-relaxed text-base">
-                نؤمن في Lumina Skin أن الجمال الحقيقي ينبع من العناية النقية. منتجاتنا مصممة خصيصاً لتمنح بشرتك التغذية والترطيب المثالي دون أي مواد ضارة. التوصيل متوفر لكافة ولايات الجزائر 🇩🇿.
-            </p>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 px-6 lg:px-20 max-w-4xl mx-auto w-full">
-        <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-[#f3d3d9] flex flex-col md:flex-row gap-10">
-            <div class="md:w-1/2 space-y-4">
-                <h3 class="text-2xl font-bold text-[#4a2e35]">تواصل معنا</h3>
-                <p class="text-sm text-[#73434d]">لديك استفسار حول المنتجات أو التوصيل؟ يسعدنا جداً تواصلك معنا.</p>
-                <div class="space-y-3 text-sm text-[#73434d] pt-2">
-                    <p class="flex items-center gap-3">📞 الهاتف: +213 555 123 456</p>
-                    <p class="flex items-center gap-3">✉️ البريد: contact@lumina-skin.dz</p>
-                    <p class="flex items-center gap-3">📍 العنوان: الجزائر العاصمة، الجزائر</p>
-                </div>
-            </div>
-            <div class="md:w-1/2 space-y-4">
-                <form onsubmit="submitForm(event)" class="space-y-4">
-                    <input type="text" placeholder="اسمك الكريم" required class="w-full px-4 py-3 rounded-xl border border-[#f3d3d9] focus:outline-none focus:border-[#d97788] text-sm">
-                    <input type="email" placeholder="بريدك الإلكتروني" required class="w-full px-4 py-3 rounded-xl border border-[#f3d3d9] focus:outline-none focus:border-[#d97788] text-sm">
-                    <textarea rows="3" placeholder="رسالتك أو استفسارك..." required class="w-full px-4 py-3 rounded-xl border border-[#f3d3d9] focus:outline-none focus:border-[#d97788] text-sm"></textarea>
-                    <button type="submit" class="w-full bg-[#d97788] hover:bg-[#c26173] text-white py-3 rounded-xl font-medium shadow transition text-sm">إرسال الرسالة</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-[#4a2e35] text-white py-8 text-center text-xs tracking-wider">
-        <p>© 2026 Lumina Skin. جميع الحقوق محفوظة. Radiate Your Beauty 🌸</p>
-    </footer>
-
-    <div id="cart-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl relative space-y-4">
-            <div class="flex justify-between items-center border-b border-[#f3d3d9] pb-4">
-                <h3 class="text-xl font-bold text-[#4a2e35]">سلة المشتريات</h3>
-                <button onclick="closeCartModal()" class="text-gray-400 hover:text-black text-xl font-bold">×</button>
-            </div>
-            <div id="cart-items" class="space-y-3 max-h-60 overflow-y-auto">
-                <!-- Dynamic Items -->
-            </div>
-            <div class="border-t border-[#f3d3d9] pt-4 flex justify-between items-center font-bold text-lg text-[#4a2e35]">
-                <span>المجموع:</span>
-                <span id="cart-total">0 د.ج</span>
-            </div>
-            <button onclick="checkout()" class="w-full bg-[#d97788] hover:bg-[#c26173] text-white py-3 rounded-2xl font-medium shadow transition">إتمام الطلب الآن</button>
-        </div>
-    </div>
-
-    <!-- Notification Toast -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-[#4a2e35] text-white px-6 py-3 rounded-2xl shadow-xl transform translate-y-20 opacity-0 transition duration-300 z-50 text-sm">
-        تمت إضافة المنتج إلى السلة بنجاح!
-    </div>
-
-    <script>
-        let cart = [];
-
-        function addToCart(name, price) {
-            const existingItem = cart.find(item => item.name === name);
-            if (existingItem) {
-                existingItem.qty++;
-            } else {
-                cart.push({ name, price, qty: 1 });
-            }
-            updateCartUI();
-            showToast();
-        }
-
-        function updateCartUI() {
-            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
-            document.getElementById('cart-count').innerText = totalCount;
-
-            const cartContainer = document.getElementById('cart-items');
-            cartContainer.innerHTML = '';
-            
-            if (cart.length === 0) {
-                cartContainer.innerHTML = '<p class="text-center text-gray-500 py-4 text-sm">سلة المشتريات فارغة.</p>';
-            } else {
-                cart.forEach((item, index) => {
-                    cartContainer.innerHTML += `
-                        <div class="flex justify-between items-center text-sm border-b border-gray-100 pb-2">
-                            <div>
-                                <h4 class="font-semibold text-[#4a2e35]">${item.name}</h4>
-                                <span class="text-xs text-gray-500">${item.price.toLocaleString()} د.ج × ${item.qty}</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="font-bold text-[#d97788]">${(item.price * item.qty).toLocaleString()} د.ج</span>
-                                <button onclick="removeItem(${index})" class="text-red-400 hover:text-red-600 font-bold">×</button>
-                            </div>
-                        </div>
-                    `;
-                });
-            }
-
-            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            document.getElementById('cart-total').innerText = `${totalPrice.toLocaleString()} د.ج`;
-        }
-
-        function removeItem(index) {
-            cart.splice(index, 1);
-            updateCartUI();
-        }
-
-        function openCartModal() {
-            document.getElementById('cart-modal').classList.remove('hidden');
-        }
-
-        function closeCartName() {
-            document.getElementById('cart-modal').classList.add('hidden');
-        }
-        function closeCartModal() {
-            document.getElementById('cart-modal').classList.add('hidden');
-        }
-
-        function checkout() {
-            if (cart.length === 0) {
-                showCustomMessage('عذراً، السلة فارغة حالياً!');
-                return;
-            }
-            showCustomMessage('شكراً لتسوقك معنا! تم إرسال طلبك بنجاح وسنتواصل معك قريباً لتأكيد التوصيل.');
-            cart = [];
-            updateCartUI();
-            closeCartModal();
-        }
-
-        function showToast() {
-            const toast = document.getElementById('toast');
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 2500);
-        }
-
-        function showCustomMessage(msg) {
-            const toast = document.getElementById('toast');
-            toast.innerText = msg;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-                setTimeout(() => {
-                    toast.innerText = 'تمت إضافة المنتج إلى السلة بنجاح!';
-                }, 300);
-            }, 3500);
-        }
-
-        function submitForm(event) {
-            event.preventDefault();
-            showCustomMessage('شكراً لك! تم استلام رسالتك وسنرد عليك قريباً.');
-            event.target.reset();
-        }
-    </script>
+​<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#f3d3d9] px-6 py-4 flex justify-between items-center shadow-sm">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-black text-[#d97788] tracking-wider">Lumina Skin 🌸</span>
+</div>
+<nav class="hidden md:flex gap-8 text-sm font-medium text-[#73434d]">
+<a href="#hero" class="hover:text-[#d97788] transition">الرئيسية</a>
+<a href="#products" class="hover:text-[#d97788] transition">المنتجات</a>
+<a href="#about" class="hover:text-[#d97788] transition">قصتنا</a>
+<a href="#contact" class="hover:text-[#d97788] transition">اتصل بنا</a>
+</nav>
+<div class="flex items-center gap-4">
+<button onclick="openCartModal()" class="relative bg-[#d97788] text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:bg-[#c26173] transition flex items-center gap-2">
+🛍️ السلة <span id="cart-count" class="bg-white text-[#d97788] px-2 py-0.5 rounded-full text-xs font-bold">0</span>
+</button>
+</div>
+</header>
+​<section id="hero" class="hero-gradient py-20 px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between">
+<div class="lg:w-1/2 space-y-6 text-center lg:text-right">
+<span class="bg-[#d97788]/20 text-[#d97788] text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#d97788]/30">عناية طبيعية فاخرة</span>
+<h1 class="text-4xl lg:text-6xl font-black leading-tight">
+تألقي بإشراقة طبيعية مع <span class="text-[#d97788]">Lumina Skin</span>
+</h1>
+<p class="text-[#73434d] text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
+سيروم الوجه الفاخر المصنوع بعناية من أجود المكونات الطبيعية ومستخلصات الورود لترطيب بشرتك بعمق ومنحها نعومة الحرير.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<a href="#products" class="bg-[#d97788] hover:bg-[#c26173] text-white px-8 py-3.5 rounded-full font-bold shadow-lg transition text-center">اطلبي السيروم الآن</a>
+<a href="#about" class="border border-[#d97788] text-[#d97788] hover:bg-[#d97788]/10 px-8 py-3.5 rounded-full font-medium transition text-center">اعرفي المزيد</a>
+</div>
+</div>
+<div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center relative">
+<div class="absolute w-72 h-72 bg-[#f7d1d8] rounded-full filter blur-3xl -z-10"></div>
+<!-- Serum Hero Image -->
+<img src="1789137497736-ezrem.png" alt="Lumina Skin Serum" class="w-80 h-80 object-cover rounded-3xl shadow-2xl border-4 border-white">
+</div>
+</section>
+​<section id="products" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto w-full">
+<div class="text-center mb-16">
+<h2 class="text-3xl lg:text-4xl font-bold text-[#4a2e35]">منتجاتنا المميزة</h2>
+<p class="text-[#73434d] mt-2">اختيارات طبيعية 100% لأجل نضارة بشرتك</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-md mx-auto">
+<!-- Product Card -->
+<div class="bg-white rounded-3xl p-6 shadow-sm border border-[#f3d3d9] flex flex-col justify-between hover:shadow-md transition">
+<div>
+<img src="1789137565759-ezrem.png" alt="سيروم لومينا سكين" class="w-full h-80 object-cover rounded-2xl mb-4">
+<h3 class="font-bold text-xl text-[#4a2e35]">سيروم الورد الطبيعي للوجه</h3>
+<p class="text-xs text-[#d97788] font-medium uppercase mt-1">الأكثر مبيعاً</p>
+<p class="text-sm text-[#73434d] mt-2">ترطيب عميق، توحيد لون البشرة، ومنحها إشراقة فورية طوال اليوم.</p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="text-xl font-black text-[#4a2e35]">4,500 د.ج</span>
+<button onclick="addToCart('سيروم الورد الطبيعي للوجه', 4500)" class="bg-[#fce8ec] text-[#d97788] hover:bg-[#d97788] hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition">أضف للسلة</button>
+</div>
+</div>
+</div>
+</section>
+​<section id="about" class="bg-[#fce8ec] py-20 px-6 lg:px-20">
+<div class="max-w-4xl mx-auto text-center space-y-6">
+<span class="text-[#d97788] font-semibold tracking-widest text-xs uppercase">قصتنا</span>
+<h2 class="text-3xl lg:text-4xl font-bold text-[#4a2e35]">سر جمالك المستوحى من الطبيعة</h2>
+<p class="text-[#73434d] leading-relaxed text-base">
+نؤمن في Lumina Skin أن الجمال الحقيقي ينبع من العناية النقية. منتجاتنا مصممة خصيصاً لتمنح بشرتك التغذية والترطيب المثالي دون أي مواد ضارة. التوصيل متوفر لكافة ولايات الجزائر 🇩🇿.
+</p>
+</div>
+</section>
+​<section id="contact" class="py-20 px-6 lg:px-20 max-w-4xl mx-auto w-full">
+<div class="bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-[#f3d3d9] flex flex-col md:flex-row gap-10">
+<div class="md:w-1/2 space-y-4">
+<h3 class="text-2xl font-bold text-[#4a2e35]">تواصل معنا</h3>
+<p class="text-sm text-[#73434d]">لديك استفسار حول المنتجات أو التوصيل؟ يسعدنا جداً تواصلك معنا.</p>
+<div class="space-y-3 text-sm text-[#73434d] pt-2">
+<p class="flex items-center gap-3">📞 الهاتف: +213 555 123 456</p>
+<p class="flex items-center gap-3">✉️ البريد: contact@lumina-skin.dz</p>
+<p class="flex items-center gap-3">📍 العنوان: الجزائر العاصمة، الجزائر</p>
+</div>
+</div>
+<div class="md:w-1/2 space-y-4">
+<form onsubmit="submitForm(event)" class="space-y-4">
+<input type="text" placeholder="اسمك الكريم" required class="w-full px-4 py-3 rounded-xl border border-[#f3d3d9] focus:outline-none focus:border-[#d97788] text-sm">
+<input type="email" placeholder="بريدك الإلكتروني" required class="w-full px-4 py-3 rounded-xl border border-[#f3d3d9] focus:outline-none focus:border-[#d97788] text-sm">
+<textarea rows="3" placeholder="رسالتك أو استفسارك..." required class="w-full px-4 py-3 rounded-xl border border-[#f3d3d9] focus:outline-none focus:border-[#d97788] text-sm"></textarea>
+<button type="submit" class="w-full bg-[#d97788] hover:bg-[#c26173] text-white py-3 rounded-xl font-medium shadow transition text-sm">إرسال الرسالة</button>
+</form>
+</div>
+</div>
+</section>
+​<footer class="bg-[#4a2e35] text-white py-8 text-center text-xs tracking-wider">
+<p>© 2026 Lumina Skin. جميع الحقوق محفوظة. Radiate Your Beauty 🌸</p>
+</footer>
+​<div id="cart-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+<div class="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl relative space-y-4">
+<div class="flex justify-between items-center border-b border-[#f3d3d9] pb-4">
+<h3 class="text-xl font-bold text-[#4a2e35]">سلة المشتريات</h3>
+<button onclick="closeCartModal()" class="text-gray-400 hover:text-black text-xl font-bold">×</button>
+</div>
+<div id="cart-items" class="space-y-3 max-h-60 overflow-y-auto">
+<!-- Dynamic Items -->
+</div>
+<div class="border-t border-[#f3d3d9] pt-4 flex justify-between items-center font-bold text-lg text-[#4a2e35]">
+<span>المجموع:</span>
+<span id="cart-total">0 د.ج</span>
+</div>
+<button onclick="checkout()" class="w-full bg-[#d97788] hover:bg-[#c26173] text-white py-3 rounded-2xl font-medium shadow transition">إتمام الطلب الآن</button>
+</div>
+</div>
+​<!-- Notification Toast -->
+<div id="toast" class="fixed bottom-6 right-6 bg-[#4a2e35] text-white px-6 py-3 rounded-2xl shadow-xl transform translate-y-20 opacity-0 transition duration-300 z-50 text-sm">
+تمت إضافة المنتج إلى السلة بنجاح!
+</div>
+​<script>
+let cart = [];
+​function addToCart(name, price) {
+const existingItem = cart.find(item => item.name === name);
+if (existingItem) {
+existingItem.qty++;
+} else {
+cart.push({ name, price, qty: 1 });
+}
+updateCartUI();
+showToast();
+}
+​function updateCartUI() {
+const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+document.getElementById('cart-count').innerText = totalCount;
+​const cartContainer = document.getElementById('cart-items');
+cartContainer.innerHTML = '';
+​if (cart.length === 0) {
+cartContainer.innerHTML = '<p class="text-center text-gray-500 py-4 text-sm">سلة المشتريات فارغة.</p>';
+} else {
+cart.forEach((item, index) => {
+cartContainer.innerHTML += <div class="flex justify-between items-center text-sm border-b border-gray-100 pb-2"> <div> <h4 class="font-semibold text-[#4a2e35]">${item.name}</h4> <span class="text-xs text-gray-500">${item.price.toLocaleString()} د.ج × ${item.qty}</span> </div> <div class="flex items-center gap-3"> <span class="font-bold text-[#d97788]">${(item.price * item.qty).toLocaleString()} د.ج</span> <button onclick="removeItem(${index})" class="text-red-400 hover:text-red-600 font-bold">×</button> </div> </div>;
+});
+}
+​const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+document.getElementById('cart-total').innerText = ${totalPrice.toLocaleString()} د.ج;
+}
+​function removeItem(index) {
+cart.splice(index, 1);
+updateCartUI();
+}
+​function openCartModal() {
+document.getElementById('cart-modal').classList.remove('hidden');
+}
+​function closeCartModal() {
+document.getElementById('cart-modal').classList.add('hidden');
+}
+​function checkout() {
+if (cart.length === 0) {
+showCustomMessage('عذراً، السلة فارغة حالياً!');
+return;
+}
+showCustomMessage('شكراً لتسوقك معنا! تم إرسال طلبك بنجاح وسنتواصل معك قريباً لتأكيد التوصيل.');
+cart = [];
+updateCartUI();
+closeCartModal();
+}
+​function showToast() {
+const toast = document.getElementById('toast');
+toast.classList.remove('translate-y-20', 'opacity-0');
+setTimeout(() => {
+toast.classList.add('translate-y-20', 'opacity-0');
+}, 2500);
+}
+​function showCustomMessage(msg) {
+const toast = document.getElementById('toast');
+toast.innerText = msg;
+toast.classList.remove('translate-y-20', 'opacity-0');
+setTimeout(() => {
+toast.classList.add('translate-y-20', 'opacity-0');
+setTimeout(() => {
+toast.innerText = 'تمت إضافة المنتج إلى السلة بنجاح!';
+}, 300);
+}, 3500);
+}
+​function submitForm(event) {
+event.preventDefault();
+showCustomMessage('شكراً لك! تم استلام رسالتك وسنرد عليك قريباً.');
+event.target.reset();
+}
+</script>
 </body>
     </html>
