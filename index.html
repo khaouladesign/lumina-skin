@@ -52,6 +52,7 @@
         </div>
         <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center relative">
             <div class="absolute w-72 h-72 bg-[#f7d1d8] rounded-full filter blur-3xl -z-10"></div>
+            <!-- Serum image updated to match user request -->
             <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600" alt="Lumina Skin Serum" class="w-80 h-auto rounded-3xl shadow-2xl border-4 border-white object-cover">
         </div>
     </section>
@@ -65,7 +66,8 @@
             <!-- Product 1 -->
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-[#f3d3d9] flex flex-col justify-between hover:shadow-md transition">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1608248597359-97424d3512a8?w=400" alt="سيروم لومينا سكين" class="w-full h-64 object-cover rounded-2xl mb-4">
+                    <!-- Serum main product image updated -->
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600" alt="سيروم لومينا سكين" class="w-full h-64 object-cover rounded-2xl mb-4">
                     <h3 class="font-bold text-xl text-[#4a2e35]">سيروم الورد الطبيعي للوجه</h3>
                     <p class="text-xs text-[#d97788] font-medium uppercase mt-1">الأكثر مبيعاً</p>
                     <p class="text-sm text-[#73434d] mt-2">ترطيب عميق، توحيد لون البشرة، ومنحها إشراقة فورية طوال اليوم.</p>
@@ -78,7 +80,7 @@
             <!-- Product 2 -->
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-[#f3d3d9] flex flex-col justify-between hover:shadow-md transition">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="باقة العناية المتكاملة" class="w-full h-64 object-cover rounded-2xl mb-4">
+                    <img src="https://images.unsplash.com/photo-1608248597359-97424d3512a8?w=400" alt="باقة العناية المتكاملة" class="w-full h-64 object-cover rounded-2xl mb-4">
                     <h3 class="font-bold text-xl text-[#4a2e35]">باقة لومينا المتكاملة</h3>
                     <p class="text-xs text-[#d97788] font-medium uppercase mt-1">عرض خاص</p>
                     <p class="text-sm text-[#73434d] mt-2">سيروم الوجه + كريم مرطب مع توصيل مجاني لكافة ولايات الجزائر.</p>
@@ -202,6 +204,9 @@
             document.getElementById('cart-modal').classList.remove('hidden');
         }
 
+        function closeCartName() {
+            document.getElementById('cart-modal').classList.add('hidden');
+        }
         function closeCartModal() {
             document.getElementById('cart-modal').classList.add('hidden');
         }
@@ -244,4 +249,4 @@
         }
     </script>
 </body>
-    </html>
+</html>
