@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر ريتال - أناقتك تبدأ من هنا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #faf8f5;
+            color: #2c221e;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2c221e 0%, #4a3832 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#e8dfd8] px-6 py-4 flex justify-between items-center shadow-sm">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl font-black text-[#8c6d62] tracking-wider">رِيتَال</span>
+        </div>
+        <nav class="hidden md:flex gap-8 text-sm font-medium text-[#59453d]">
+            <a href="#hero" class="hover:text-[#8c6d62] transition">الرئيسية</a>
+            <a href="#products" class="hover:text-[#8c6d62] transition">التشكيلة الجديدة</a>
+            <a href="#about" class="hover:text-[#8c6d62] transition">قصتنا</a>
+            <a href="#contact" class="hover:text-[#8c6d62] transition">اتصل بنا</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <button onclick="openCartModal()" class="relative bg-[#8c6d62] text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:bg-[#72544a] transition flex items-center gap-2">
+                🛍️ السلة <span id="cart-count" class="bg-white text-[#8c6d62] px-2 py-0.5 rounded-full text-xs font-bold">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-gradient text-white py-20 px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between">
+        <div class="lg:w-1/2 space-y-6 text-center lg:text-right">
+            <span class="bg-[#d4af37]/20 text-[#d4af37] text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#d4af37]/30">تشكيلة فاخرة 2026</span>
+            <h1 class="text-4xl lg:text-6xl font-black leading-tight">
+                تألقي بأرقى التصاميم <span class="text-[#d4af37]">الجزائرية والعالمية</span>
+            </h1>
+            <p class="text-[#d9d2cb] text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
+                تشكيلة فريدة من الأياء والعباءات الفاخرة المصنوعة بأجود الأقمشة لتناسب ذوقك الرفيع وتمنحك إطلالة استثنائية.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="#products" class="bg-[#d4af37] hover:bg-[#c29d30] text-[#2c221e] px-8 py-3.5 rounded-full font-bold shadow-lg transition text-center">تسوقي الآن</a>
+                <a href="#about" class="border border-[#d9d2cb] text-white hover:bg-white/10 px-8 py-3.5 rounded-full font-medium transition text-center">اعرفي المزيد</a>
+            </div>
+        </div>
+        <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center relative">
+            <div class="absolute w-72 h-72 bg-[#d4af37]/10 rounded-full filter blur-3xl -z-10"></div>
+            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600" alt="Collection Hero" class="w-80 h-auto rounded-3xl shadow-2xl border-4 border-white/20 object-cover">
+        </div>
+    </section>
+
+    <section id="products" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto w-full">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-[#2c221e]">أحدث الموديلات</h2>
+            <p class="text-[#735c52] mt-2">اختيارات مميزة بعناية فائقة لأجل راحتك وأناقتك</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-[#e8dfd8] flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400" alt="عباية ملكية سوداء" class="w-full h-64 object-cover rounded-2xl mb-4">
+                    <h3 class="font-bold text-xl text-[#2c221e]">عباية ملكية مطرزة</h3>
+                    <p class="text-xs text-[#8c6d62] font-medium uppercase mt-1">الأكثر مبيعاً</p>
+                    <p class="text-sm text-[#735c52] mt-2">تطريز يدوي فاخر بخيوط ذهبية على قماش الكريب الراقي.</p>
+                </div>
+                <div class="mt-6 flex items-center justify-between">
+                    <span class="text-xl font-black text-[#2c221e]">12,500 د.ج</span>
+                    <button onclick="addToCart('عباية ملكية مطرزة', 12500)" class="bg-[#f2ede9] text-[#8c6d62] hover:bg-[#8c6d62] hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition">أضف للسلة</button>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-[#e8dfd8] flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400" alt="فستان سهرة" class="w-full h-64 object-cover rounded-2xl mb-4">
+                    <h3 class="font-bold text-xl text-[#2c221e]">فستان سهرة راقي</h3>
+                    <p class="text-xs text-[#8c6d62] font-medium uppercase mt-1">جديد</p>
+                    <p class="text-sm text-[#735c52] mt-2">تصميم عصري أنيق يناسب المناسبات الخاصة والحفلات العائلية.</p>
+                </div>
+                <div class="mt-6 flex items-center justify-between">
+                    <span class="text-xl font-black text-[#2c221e]">18,000 د.ج</span>
+                    <button onclick="addToCart('فستان سهرة راقي', 18000)" class="bg-[#f2ede9] text-[#8c6d62] hover:bg-[#8c6d62] hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition">أضف للسلة</button>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-[#e8dfd8] flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400" alt="قميص كاجوال فاخر" class="w-full h-64 object-cover rounded-2xl mb-4">
+                    <h3 class="font-bold text-xl text-[#2c221e]">طقم كاجوال عصري</h3>
+                    <p class="text-xs text-[#8c6d62] font-medium uppercase mt-1">مريح وعملي</p>
+                    <p class="text-sm text-[#735c52] mt-2">مصنوع من القطن الطبيعي الخالص ليمنحك راحة طوال اليوم.</p>
+                </div>
+                <div class="mt-6 flex items-center justify-between">
+                    <span class="text-xl font-black text-[#2c221e]">8,500 د.ج</span>
+                    <button onclick="addToCart('طقم كاجوال عصري', 8500)" class="bg-[#f2ede9] text-[#8c6d62] hover:bg-[#8c6d62] hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition">أضف للسلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-[#f2ede9] py-20 px-6 lg:px-20">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <span class="text-[#8c6d62] font-semibold tracking-widest text-xs uppercase">قصتنا</span>
+            <h2 class="text-3xl lg:text-4xl font-bold text-[#2c221e]">الأناقة الممزوجة بالأصالة</h2>
+            <p class="text-[#735c52] leading-relaxed text-base">
+                نحن في متجر ريتال نؤمن بأن الأناقة هي انعكاس لشخصيتك. نقدم لك تصاميم فريدة تجمع بين أصالة التراث ولمسة الموضة العصرية لتبقي دائماً في قمة التألق والثقة بالنفس. التوصيل متوفر لكافة ولايات الجزائر.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 lg:px-20 max-w-4xl mx-auto w-full">
+        <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-[#e8dfd8] flex flex-col md:flex-row gap-10">
+            <div class="md:w-1/2 space-y-4">
+                <h3 class="text-2xl font-bold text-[#2c221e]">تواصل معنا</h3>
+                <p class="text-sm text-[#735c52]">لديك استفسار حول المقاسات أو التوصيل؟ يسعدنا جداً تواصلك معنا.</p>
+                <div class="space-y-3 text-sm text-[#735c52] pt-2">
+                    <p class="flex items-center gap-3">📞 الهاتف: +213 550 00 00 00</p>
+                    <p class="flex items-center gap-3">✉️ البريد: contact@rital-store.dz</p>
+                    <p class="flex items-center gap-3">📍 العنوان: الجزائر العاصمة، الجزائر</p>
+                </div>
+            </div>
+            <div class="md:w-1/2 space-y-4">
+                <form onsubmit="submitForm(event)" class="space-y-4">
+                    <input type="text" placeholder="اسمك الكريم" required class="w-full px-4 py-3 rounded-xl border border-[#e8dfd8] focus:outline-none focus:border-[#8c6d62] text-sm">
+                    <input type="email" placeholder="بريدك الإلكتروني" required class="w-full px-4 py-3 rounded-xl border border-[#e8dfd8] focus:outline-none focus:border-[#8c6d62] text-sm">
+                    <textarea rows="3" placeholder="رسالتك أو استفسارك..." required class="w-full px-4 py-3 rounded-xl border border-[#e8dfd8] focus:outline-none focus:border-[#8c6d62] text-sm"></textarea>
+                    <button type="submit" class="w-full bg-[#8c6d62] hover:bg-[#72544a] text-white py-3 rounded-xl font-medium shadow transition text-sm">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#2c221e] text-white py-8 text-center text-xs tracking-wider">
+        <p>© 2026 متجر ريتال. جميع الحقوق محفوظة. الأناقة تبدأ هنا.</p>
+    </footer>
+
+    <div id="cart-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl relative space-y-4">
+            <div class="flex justify-between items-center border-b border-[#e8dfd8] pb-4">
+                <h3 class="text-xl font-bold text-[#2c221e]">سلة المشتريات</h3>
+                <button onclick="closeCartModal()" class="text-gray-400 hover:text-black text-xl font-bold">×</button>
+            </div>
+            <div id="cart-items" class="space-y-3 max-h-60 overflow-y-auto">
+                <!-- Dynamic Items -->
+            </div>
+            <div class="border-t border-[#e8dfd8] pt-4 flex justify-between items-center font-bold text-lg text-[#2c221e]">
+                <span>المجموع:</span>
+                <span id="cart-total">0 د.ج</span>
+            </div>
+            <button onclick="checkout()" class="w-full bg-[#8c6d62] hover:bg-[#72544a] text-white py-3 rounded-2xl font-medium shadow transition">إتمام الطلب الآن</button>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-[#2c221e] text-white px-6 py-3 rounded-2xl shadow-xl transform translate-y-20 opacity-0 transition duration-300 z-50 text-sm">
+        تمت إضافة المنتج إلى السلة بنجاح!
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.qty++;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            updateCartUI();
+            showToast();
+        }
+
+        function updateCartUI() {
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            document.getElementById('cart-count').innerText = totalCount;
+
+            const cartContainer = document.getElementById('cart-items');
+            cartContainer.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p class="text-center text-gray-500 py-4 text-sm">سلة المشتريات فارغة.</p>';
+            } else {
+                cart.forEach((item, index) => {
+                    cartContainer.innerHTML += `
+                        <div class="flex justify-between items-center text-sm border-b border-gray-100 pb-2">
+                            <div>
+                                <h4 class="font-semibold text-[#2c221e]">${item.name}</h4>
+                                <span class="text-xs text-gray-500">${item.price.toLocaleString()} د.ج × ${item.qty}</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="font-bold text-[#8c6d62]">${(item.price * item.qty).toLocaleString()} د.ج</span>
+                                <button onclick="removeItem(${index})" class="text-red-400 hover:text-red-600 font-bold">×</button>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            document.getElementById('cart-total').innerText = `${totalPrice.toLocaleString()} د.ج`;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function openCartModal() {
+            document.getElementById('cart-modal').classList.remove('hidden');
+        }
+
+        function closeCartModal() {
+            document.getElementById('cart-modal').classList.add('hidden');
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                // Custom modal simulation or inline message instead of alert
+                showCustomMessage('عذراً، السلة فارغة حالياً!');
+                return;
+            }
+            showCustomMessage('شكراً لتسوقك معنا! تم إرسال طلبك بنجاح وسنتاصل معك قريباً لتأكيد التوصيل.');
+            cart = [];
+            updateCartUI();
+            closeCartModal();
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+
+        function showCustomMessage(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+                setTimeout(() => {
+                    toast.innerText = 'تمت إضافة المنتج إلى السلة بنجاح!';
+                }, 300);
+            }, 3500);
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            showCustomMessage('شكراً لك! تم استلام رسالتك وسنرد عليك قريباً.');
+            event.target.reset();
+        }
+    </script>
+</body>
+          </html>
